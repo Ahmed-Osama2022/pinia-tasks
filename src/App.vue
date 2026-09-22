@@ -4,9 +4,7 @@ import { useTaskStore } from './stores/TaskStore';
 
 const taskStore = useTaskStore();
 
-console.log(taskStore);
-
-// return { taskStore };
+// console.log(taskStore);
 </script>
 
 <template>
@@ -16,7 +14,16 @@ console.log(taskStore);
 
   <hr />
   <div class="task-list">
+    <p>All Tasks</p>
     <div v-for="task in taskStore.tasks">
+      <TaskDetails :task="task" />
+    </div>
+  </div>
+
+  <!-- for only the favourites -->
+  <div class="task-list mb-5">
+    <p>Favourite Tasks</p>
+    <div v-for="task in taskStore.favs">
       <TaskDetails :task="task" />
     </div>
   </div>

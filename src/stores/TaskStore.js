@@ -11,4 +11,11 @@ export const useTaskStore = defineStore('taskStore', {
     // You can Add a different type of properties at once, But this not our case here
     TaskAppAuthorName: 'Ahmed Osama',
   }),
+
+  getters: {
+    favs() {
+      // this here is refereing to the state
+      return this.tasks.filter((task) => task.isFav);
+    },
+  },
 });
