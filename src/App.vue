@@ -14,7 +14,10 @@ const taskStore = useTaskStore();
 
   <hr />
   <div class="task-list">
-    <p>All Tasks</p>
+    <p>
+      All Tasks:
+      <span class="bg-success px-3 py-2 ms-2 text-white rounded-3">{{ taskStore.totalCount }}</span>
+    </p>
     <div v-for="task in taskStore.tasks">
       <TaskDetails :task="task" />
     </div>
