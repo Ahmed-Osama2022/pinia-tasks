@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import TaskDetails from './components/TaskDetails.vue';
 import ToggleSwitch from './components/ToggleSwitch.vue';
 import { useTaskStore } from './stores/TaskStore';
+import TaskForm from './components/TaskForm.vue';
 
 const taskStore = useTaskStore();
 
@@ -17,6 +18,10 @@ const favShow = ref(false);
 
     <p>App Author Name: {{ taskStore.TaskAppAuthorName }}</p>
   </header>
+
+  <!-- Task Form -->
+  <TaskForm />
+
   <hr />
   <!-- Button toggler -->
   <div class="d-flex justify-content-center align-items-center gap-2 my-3 text-center">
