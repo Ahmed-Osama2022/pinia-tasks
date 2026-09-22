@@ -12,7 +12,7 @@ console.log(taskStore);
 <template>
   <h1>Tasks store</h1>
 
-  <p>{{ taskStore.TaskAppAuthorName }}</p>
+  <p>App Author Name: {{ taskStore.TaskAppAuthorName }}</p>
 
   <hr />
   <div class="task-list">
