@@ -1,9 +1,24 @@
-<script setup></script>
+<script setup>
+import { useTaskStore } from './stores/TaskStore';
+
+const taskStore = useTaskStore();
+
+console.log(taskStore);
+
+// return { taskStore };
+</script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-  </header>
+  <h1>Tasks store</h1>
+
+  <p>{{ taskStore.TaskAppAuthorName }}</p>
 </template>
 
-<style scoped></style>
+<style scoped>
+* {
+  text-align: center;
+}
+p {
+  font-size: 22px;
+}
+</style>
