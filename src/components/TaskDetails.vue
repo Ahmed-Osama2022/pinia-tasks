@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <div class="">
     <p>{{ task.id }}</p>
     <h2>{{ task.title }}</h2>
   </div>
