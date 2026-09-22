@@ -1,4 +1,5 @@
 <script setup>
+import TaskDetails from './components/TaskDetails.vue';
 import { useTaskStore } from './stores/TaskStore';
 
 const taskStore = useTaskStore();
@@ -12,6 +13,13 @@ console.log(taskStore);
   <h1>Tasks store</h1>
 
   <p>{{ taskStore.TaskAppAuthorName }}</p>
+
+  <hr />
+  <div class="task-list">
+    <div v-for="task in taskStore.tasks">
+      <TaskDetails :task="task" />
+    </div>
+  </div>
 </template>
 
 <style scoped>
