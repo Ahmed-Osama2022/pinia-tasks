@@ -22,9 +22,9 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div>
-    <form @submit.prevent="handleSubmit">
-      <input type="text" placeholder="Add a new task..." v-model="newTask" />
+  <div class="form d-flex justify-content-center my-4">
+    <form @submit.prevent="handleSubmit" class="d-flex gap-2">
+      <input type="text" placeholder="Add a new task..." v-model="newTask" class="form-control" />
       <button class="btn btn-outline-success" type="submit">Add Task</button>
     </form>
   </div>

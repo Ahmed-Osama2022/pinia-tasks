@@ -30,7 +30,7 @@ export const useTaskStore = defineStore('taskStore', {
     deleteTask(id) {
       setTimeout(() => {
         this.tasks = this.tasks.filter((task) => task.id !== id);
-      }, 400);
+      }, 300);
     },
     toggleFav(id) {
       const task = this.tasks.find((task) => task.id === id);
